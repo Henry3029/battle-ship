@@ -10,5 +10,5 @@ test("let the hit count increase, when we can the hit() method", () => {
 	test("when hit equal length, let isSunk be true", () => {
 		const myShip = new Ship(3)
 		myShip.isSunk();
-		expect(shipStat.isSunk).toBe(true);
+		expect(myShip.shipStat.isSunk).toBe(true);
 		})
