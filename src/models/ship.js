@@ -13,7 +13,7 @@ export class Ship {
 				this.damage += 1;
 				}
 	
-	isSunk() {
+/*	isSunk() {
 		if(this.damage >= this.length) {
 			this.shipStat.isSunk = true;
 			this.shipStat.timesSunk += 1;
@@ -24,6 +24,6 @@ export class Ship {
 				return false;
 				}
 		}
-		
+		*/
 	}
 	
