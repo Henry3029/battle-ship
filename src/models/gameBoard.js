@@ -21,6 +21,7 @@ export class GameBoard {
   // FIXED: This is now correctly positioned inside the GameBoard class
   receiveAttack(row, col) {
     const key = `${row},${col}`;
+    if(this.missedShot.includes(key)) return "Already miss here"
     const targetShip = this.shipPlaced[key];
     
     if (targetShip) {
