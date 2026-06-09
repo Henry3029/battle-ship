@@ -10,9 +10,6 @@ test("GameBoard should place ships at specific coordinates", () => {
 });
 
 
-import { GameBoard } from './gameBoard.js';
-import { Ship } from './ship.js';
-
 test("GameBoard should receive an attack and send the hit to the correct ship", () => {
   // 1. Arrange: Set up a board and place a ship on it
   const myBoard = new GameBoard();
