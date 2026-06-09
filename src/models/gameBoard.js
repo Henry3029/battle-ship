@@ -3,6 +3,7 @@ import { Ship } from './ship';
 export class GameBoard {
   constructor() {
     this.shipPlaced = {};
+    this.missedShots = [];
   }
     
   placeShip(row, col, length, orientation) {
@@ -19,3 +20,13 @@ export class GameBoard {
     }
   }
 }
+
+receiveAttack(row, col) {
+	const key = `${row},${col}`;
+	const targetShip = this.shipPlaced[key];
+	if(targetShip) {
+		targetShip.hit()
+		} else {
+			this.missedShots.push(key);
+			}
+	}
