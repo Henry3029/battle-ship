@@ -1,3 +1,4 @@
+import { GameBoard } from './gameBoard'; 
 test("GameBoard should place ships at specific coordinates", () => {
   const myBoard = new GameBoard();
   myBoard.placeShip(0, 0, 3, "horizontal");
