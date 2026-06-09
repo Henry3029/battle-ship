@@ -11,22 +11,23 @@ export class GameBoard {
     
     for (let i = 0; i < length; i++) {
       if (orientation === 'horizontal') {
-        // Fixed: Added the closing backtick right before the closing bracket
         this.shipPlaced[`${row},${col + i}`] = myShip; 
       } else if (orientation === 'vertical') {
-        // Fixed: Added the closing backtick right before the closing bracket
         this.shipPlaced[`${row + i},${col}`] = myShip; 
       }
     }
-  }
-}
+  } // Closes placeShip
 
-receiveAttack(row, col) {
-	const key = `${row},${col}`;
-	const targetShip = this.shipPlaced[key];
-	if(targetShip) {
-		targetShip.hit()
-		} else {
-			this.missedShots.push(key);
-			}
-	}
+  // FIXED: This is now correctly positioned inside the GameBoard class
+  receiveAttack(row, col) {
+    const key = `${row},${col}`;
+    const targetShip = this.shipPlaced[key];
+    
+    if (targetShip) {
+      targetShip.hit();
+    } else {
+      this.missedShots.push(key);
+    }
+  } // Closes receiveAttack
+
+} // FIXED: This final brace closes the entire GameBoard class
